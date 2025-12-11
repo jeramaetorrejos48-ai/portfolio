@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Jeramae Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Jeramae</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Info</a></li>
+                <li><a href="photos.html" class="active">Photos</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="animated-bg"></div>
+        <section class="photos-section">
+            <div class="container">
+                <h1 class="page-title">My Photos</h1>
+                <p class="section-description">A collection of my work and moments</p>
+                
+                <div class="photos-grid">
+                    <div class="photo-card" onclick="openLightbox('image/photo1.jpg', 'Photo 1')">
+                        <img src="image/photo1.jpg" alt="Photo 1" class="photo-image">
+                        <div class="photo-overlay">
+                            <h3>Photo 1</h3>
+                            <p>Click to view full size</p>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openLightbox('image/photo2.jpg', 'Photo 2')">
+                        <img src="image/photo2.jpg" alt="Photo 2" class="photo-image">
+                        <div class="photo-overlay">
+                            <h3>Photo 2</h3>
+                            <p>Click to view full size</p>
+                        </div>
+                    </div>
+                    <div class="photo-card" onclick="openLightbox('image/photo3.jpg', 'Photo 3')">
+                        <img src="image/photo3.jpg" alt="Photo 3" class="photo-image">
+                        <div class="photo-overlay">
+                            <h3>Photo 3</h3>
+                            <p>Click to view full size</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lightbox Modal -->
+                <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                    <span class="lightbox-close">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                    <div class="lightbox-caption" id="lightbox-caption"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jeramae. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
